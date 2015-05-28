@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Activity Tracker</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <style>
+            .container-fluid {
+                background-color: #4f234e;
+                color: #d6d6d6;
+            }
+            .container {
+                background-color: #ededed;
+            }
+
+            .flex-container {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+              background: #ededed;
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+  
+              -webkit-flex-flow: row wrap;
+              justify-content: space-around;
+            }
+
+            .flex-item {
+              background: #fff;
+              padding: 5px;
+              width: 220px;
+              height: 350px;
+              margin-top: 10px;
+  
+              line-height: 135px;
+              color: red;
+              font-weight: bold;
+              font-size: 3em;
+              text-align: center;
+            }
+
+            .pageTitle {
+              position: relative;
+              width: 100%;
+              text-align: center;
+              background: #ededed;
+              font-family: '/font/museo500';
+            }
+            
+            .pageTitle{
+              position: relative;
+              z-index: 10;
+              background: #ededed;
+              padding: 0 10px;
+              width: 100%;
+              text-align: center;
+              font-family: '/font/museo500';
+            }
+
+            .lightPurpleButton {
+              width: 100%;
+              background: #c469c2;
+              padding: 8px 65px;
+              padding-top: 5px;
+              padding-bottom: 10px;
+              font-size: 14px;
+              border-radius: 3px;
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              text-align: center;
+            }
+
+            .body {
+             background-color: #ededed;    
+            }
+
+            .pageTitle:after {
+              content: ' ';
+              position: absolute;
+              border-bottom: 1px solid #d6d6d6;
+              width: 100%;
+              top: 50%;
+              left: 0;
+              z-index: 0;
+            }
+
+
+        </style>
+
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+<body class="body">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <div class="form-group" id="mainLogo"> 
+                            <a href="/"><img src="~/VendorImages/logoWhite.png" alt="DealsPlus - Coupons and Deals" width="133" height="30" /></a> 
+                            <input type="text" class="form-control" placeholder="Search"> 
+                            </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                            <div class="menuIcon">
+                            <a href="javascript:void(0);" id="menuButton"><img src="http://img.dealspl.us/images/v3/blank.png" class="icon-menu-button" alt="menu"></a>
+                            </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <div class="container" id=" body">
+        @RenderSection("featured", required: false)
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
