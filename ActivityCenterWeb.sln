@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityCenter", "ActivityCenter\ActivityCenter.csproj", "{6F76C502-97C4-4C6D-81D4-9005F4F2D2C6}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityCenterWeb", "ActivityCenter\ActivityCenterWeb.csproj", "{6F76C502-97C4-4C6D-81D4-9005F4F2D2C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityCenter.Tests", "ActivityCenter.Tests\ActivityCenter.Tests.csproj", "{60400BAA-A8FC-44A2-8313-9C9DC68A76E6}"
 EndProject
